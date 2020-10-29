@@ -1,6 +1,2 @@
-node_modules/
-bdd.sql
-database.sql
 .env
-.env_prod
-.env_dev
+node_modules
