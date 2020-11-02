@@ -16,7 +16,7 @@ const app = express();
 
 const corsOptions = {
   credentials: true,
-  origin: 'http://localhost:8080'
+  origin: 'https://5fa0421de6cc220a5a97c8f2--meteo-actuelle.netlify.app'
 }
 
 app.use(cors(corsOptions));
@@ -24,7 +24,9 @@ app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: true }));
 
-app.set('trust proxy', 1) // erase when front is on prod mode
+// erase when front is on prod mode
+
+// app.set('trust proxy', 1)
 
 app.use(session({
   saveUninitialized: true,
@@ -37,8 +39,7 @@ app.use(session({
 }));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
-  //res.setHeader('Access-Control-Allow-Origin', 'http://meteo-actuelle.surge.sh');
+  res.header('Access-Control-Allow-Origin', 'https://5fa0421de6cc220a5a97c8f2--meteo-actuelle.netlify.app');
   res.header('Access-Control-Allow-Credentials', true);
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
