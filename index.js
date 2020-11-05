@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session({
   saveUninitialized: true,
   resave: true,
-  secret: process.env.EXPRESS_SESSION_MY_SECRET,
+  secret: "*Meteo_2020_Actuelle**",
   cookie: {
     sameSite: "none",
     secure: "none",
