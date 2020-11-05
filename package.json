@@ -9,6 +9,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "heroku": "^7.47.0",
     "password-validator": "^5.1.0",
     "pg": "^8.3.3",
     "sequelize": "^6.3.5"
@@ -18,7 +19,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku": "yarn heroku"
   },
   "author": "",
   "license": "ISC"

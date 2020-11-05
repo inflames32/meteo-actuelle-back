@@ -16,7 +16,7 @@ const app = express();
 
 const corsOptions = {
   credentials: true,
-  origin: 'https://5fa0421de6cc220a5a97c8f2--meteo-actuelle.netlify.app'
+  origin: 'https://meteo-actuelle.netlify.app'
 }
 
 app.use(cors(corsOptions));
@@ -39,7 +39,7 @@ app.use(session({
 }));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://5fa0421de6cc220a5a97c8f2--meteo-actuelle.netlify.app');
+  res.header('Access-Control-Allow-Origin', 'https://meteo-actuelle.netlify.app');
   res.header('Access-Control-Allow-Credentials', true);
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
